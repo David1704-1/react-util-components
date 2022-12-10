@@ -15,6 +15,8 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
       - run: npm ci
       - run: npm run build
+      - run: git config user.email "davidjovanovski62@gmail.com"
+      - run: git config user.name "David1704-1"
       - run: npm version patch
       - run: npm publish --access=public
         env:
