@@ -1,9 +1,9 @@
-import { ForeachProps } from './types'
+import type { ForeachProps } from './types'
 import { map } from 'remeda'
 
 export const Foreach = <T extends unknown>({
   list,
   mapTo,
 }: ForeachProps<T>) => {
-  return <>{map(list, mapTo)}</>
+  return <>{map.indexed(list, mapTo)}</>
 }
