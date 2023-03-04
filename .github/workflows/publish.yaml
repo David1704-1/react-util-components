@@ -9,15 +9,19 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       # Setup .npmrc file to publish to npm
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 7
       - uses: actions/setup-node@v3
         with:
           node-version: '16.x'
           registry-url: 'https://registry.npmjs.org'
-      - run: npm ci
-      - run: npm run build
+          cache: 'pnpm'
+      - run: pnpm install
+      - run: pnpm run build
       - run: git config user.email "davidjovanovski62@gmail.com"
       - run: git config user.name "David1704-1"
-      - run: npm version patch
-      - run: npm publish --access=public
+      - run: pnpm version patch
+      - run: pnpm publish --access=public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
