@@ -18,6 +18,7 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
           cache: 'pnpm'
       - run: pnpm install
+      - run: pnpm test
       - run: pnpm run build
       - run: git config user.email "davidjovanovski62@gmail.com"
       - run: git config user.name "David1704-1"

@@ -5,5 +5,5 @@ export const Foreach = <T extends unknown>({
   list,
   mapTo,
 }: ForeachProps<T>) => {
-  return <>{map.indexed(list, mapTo)}</>
+  return <span data-testid="foreach_Container">{map.indexed(list, mapTo)}</span>
 }
