@@ -1,5 +1,6 @@
+import React from 'react'
 import { render, screen } from '@testing-library/react'
-import { If } from '../'
+import { If } from '../src'
 import '@testing-library/jest-dom'
 
 describe('If component tests', () => {

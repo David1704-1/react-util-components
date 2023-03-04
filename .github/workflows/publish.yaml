@@ -19,7 +19,7 @@ jobs:
           cache: 'pnpm'
       - run: pnpm install
       - run: pnpm test
-      - run: pnpm run build
+      - run: pnpm build
       - run: git config user.email "davidjovanovski62@gmail.com"
       - run: git config user.name "David1704-1"
       - run: pnpm version patch

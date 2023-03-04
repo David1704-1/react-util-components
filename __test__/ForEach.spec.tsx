@@ -1,5 +1,6 @@
+import React from 'react'
 import { render, screen } from '@testing-library/react'
-import { Foreach } from '../'
+import { Foreach } from '../src'
 import '@testing-library/jest-dom'
 
 const renderComponent = (list: string[]) =>
